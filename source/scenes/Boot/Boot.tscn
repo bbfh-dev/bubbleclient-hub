@@ -184,7 +184,7 @@ color = Color( 0.188235, 0.341176, 0.917647, 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Logo"]
 frames = SubResource( 1 )
 animation = "loop"
-frame = 1
+frame = 49
 playing = true
 centered = false
 
