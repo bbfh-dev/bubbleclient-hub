@@ -746,7 +746,7 @@ custom_fonts/bold_font = SubResource( 54 )
 custom_fonts/normal_font = SubResource( 56 )
 bbcode_enabled = true
 bbcode_text = "[b]How to use mods[/b]:
-[url=https://github.com/bubblefish-dev/bubbleclient-server#readme]README.md[/url]
+[url=https://github.com/bubblefish-dev/bubbleclient-hub#readme]README.md[/url]
 
 [b]Status[/b]:
 Installed mods: <ML>
