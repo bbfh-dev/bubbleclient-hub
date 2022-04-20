@@ -10,7 +10,7 @@ var promise := ''
 func _ready() -> void:
 	var version_file = File.new()
 	version_file.open('user://version.txt', File.WRITE)
-	version_file.store_string('0.1a')
+	version_file.store_string('0.1b')
 	version_file.close()
 	
 	http_request_task = 'status'
