@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://source/scenes/Hub/assets/message.gd" type="Script" id=1]
+[ext_resource path="res://source/scenes/Hub/assets/sprite/looking_up.svg" type="Texture" id=2]
+[ext_resource path="res://source/scenes/Hub/assets/sprite/downloading.svg" type="Texture" id=3]
+[ext_resource path="res://source/scenes/Hub/assets/sprite/found.svg" type="Texture" id=4]
+[ext_resource path="res://source/scenes/Hub/assets/sprite/cross.svg" type="Texture" id=5]
+
+[sub_resource type="StyleBoxFlat" id=39]
+bg_color = Color( 0, 0, 0, 0.392157 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFontData" id=41]
+font_path = "res://source/scenes/common/assets/font/RedHatDisplay-Black.ttf"
+
+[sub_resource type="DynamicFont" id=42]
+font_data = SubResource( 41 )
+
+[sub_resource type="SpriteFrames" id=40]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "error",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "found",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "checking",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "downloading",
+"speed": 5.0
+} ]
+
+[node name="Message" type="Panel"]
+margin_right = 464.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 464, 32 )
+custom_styles/panel = SubResource( 39 )
+script = ExtResource( 1 )
+
+[node name="Text" type="Control" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -16.0
+margin_right = 32.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 432, 32 )
+
+[node name="Label" type="Label" parent="Text"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+custom_fonts/font = SubResource( 42 )
+valign = 1
+clip_text = true
+
+[node name="Icon" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -16.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 32, 32 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Icon"]
+position = Vector2( 16, 16 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 40 )
+animation = "checking"

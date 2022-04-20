@@ -1,0 +1,462 @@
+[gd_scene load_steps=127 format=2]
+
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0053.png" type="Texture" id=1]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0099.png" type="Texture" id=2]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0049.png" type="Texture" id=3]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0077.png" type="Texture" id=4]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0118.png" type="Texture" id=5]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0060.png" type="Texture" id=6]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0027.png" type="Texture" id=7]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0024.png" type="Texture" id=8]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0022.png" type="Texture" id=9]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0003.png" type="Texture" id=10]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0110.png" type="Texture" id=11]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0019.png" type="Texture" id=12]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0030.png" type="Texture" id=13]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0081.png" type="Texture" id=14]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0037.png" type="Texture" id=15]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0103.png" type="Texture" id=16]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0025.png" type="Texture" id=17]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0097.png" type="Texture" id=18]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0112.png" type="Texture" id=19]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0105.png" type="Texture" id=20]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0006.png" type="Texture" id=21]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0001.png" type="Texture" id=22]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0010.png" type="Texture" id=23]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0083.png" type="Texture" id=24]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0013.png" type="Texture" id=25]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0028.png" type="Texture" id=26]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0054.png" type="Texture" id=27]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0104.png" type="Texture" id=28]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0115.png" type="Texture" id=29]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0009.png" type="Texture" id=30]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0074.png" type="Texture" id=31]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0065.png" type="Texture" id=32]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0088.png" type="Texture" id=33]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0021.png" type="Texture" id=34]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0101.png" type="Texture" id=35]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0063.png" type="Texture" id=36]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0079.png" type="Texture" id=37]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0091.png" type="Texture" id=38]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0093.png" type="Texture" id=39]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0111.png" type="Texture" id=40]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0071.png" type="Texture" id=41]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0100.png" type="Texture" id=42]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0096.png" type="Texture" id=43]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0107.png" type="Texture" id=44]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0039.png" type="Texture" id=45]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0043.png" type="Texture" id=46]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0098.png" type="Texture" id=47]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0055.png" type="Texture" id=48]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0014.png" type="Texture" id=49]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0036.png" type="Texture" id=50]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0044.png" type="Texture" id=51]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0102.png" type="Texture" id=52]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0082.png" type="Texture" id=53]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0114.png" type="Texture" id=54]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0026.png" type="Texture" id=55]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0061.png" type="Texture" id=56]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0007.png" type="Texture" id=57]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0066.png" type="Texture" id=58]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0032.png" type="Texture" id=59]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0045.png" type="Texture" id=60]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0076.png" type="Texture" id=61]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0046.png" type="Texture" id=62]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0040.png" type="Texture" id=63]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0056.png" type="Texture" id=64]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0050.png" type="Texture" id=65]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0064.png" type="Texture" id=66]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0075.png" type="Texture" id=67]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0116.png" type="Texture" id=68]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0057.png" type="Texture" id=69]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0048.png" type="Texture" id=70]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0015.png" type="Texture" id=71]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0106.png" type="Texture" id=72]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0011.png" type="Texture" id=73]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0072.png" type="Texture" id=74]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0080.png" type="Texture" id=75]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0051.png" type="Texture" id=76]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0059.png" type="Texture" id=77]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0020.png" type="Texture" id=78]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0078.png" type="Texture" id=79]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0035.png" type="Texture" id=80]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0113.png" type="Texture" id=81]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0120.png" type="Texture" id=82]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0042.png" type="Texture" id=83]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0073.png" type="Texture" id=84]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0012.png" type="Texture" id=85]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0058.png" type="Texture" id=86]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0090.png" type="Texture" id=87]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0002.png" type="Texture" id=88]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0068.png" type="Texture" id=89]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0047.png" type="Texture" id=90]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0052.png" type="Texture" id=91]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0069.png" type="Texture" id=92]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0018.png" type="Texture" id=93]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0034.png" type="Texture" id=94]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0031.png" type="Texture" id=95]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0067.png" type="Texture" id=96]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0017.png" type="Texture" id=97]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0004.png" type="Texture" id=98]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0005.png" type="Texture" id=99]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0089.png" type="Texture" id=100]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0070.png" type="Texture" id=101]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0084.png" type="Texture" id=102]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0108.png" type="Texture" id=103]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0016.png" type="Texture" id=104]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0033.png" type="Texture" id=105]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0085.png" type="Texture" id=106]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0041.png" type="Texture" id=107]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0023.png" type="Texture" id=108]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0008.png" type="Texture" id=109]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0086.png" type="Texture" id=110]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0119.png" type="Texture" id=111]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0038.png" type="Texture" id=112]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0087.png" type="Texture" id=113]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0095.png" type="Texture" id=114]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0029.png" type="Texture" id=115]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0092.png" type="Texture" id=116]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0109.png" type="Texture" id=117]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0094.png" type="Texture" id=118]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0117.png" type="Texture" id=119]
+[ext_resource path="res://source/scenes/Boot/assets/boot_icon/frame0062.png" type="Texture" id=120]
+[ext_resource path="res://source/scenes/common/assets/bootup.gd" type="Script" id=121]
+
+[sub_resource type="Animation" id=4]
+resource_name = "BootUp"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("BootUp/Logo:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 352, -0.25, 0, 0.25, 0, 352, -0.25, 0, 0.25, 0, 64, -0.9, 4.89603, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("BootUp/Logo:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 142, -0.25, 0, 0.25, 0, 142, -0.25, 0, 0.25, 0, 142, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("BootUp/Logo:rect_scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.75, -0.6, 0.029134, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("BootUp/Logo:rect_scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.75, -0.5, 0.0116631, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("BootUp/Title/ColorRect:margin_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 640, -0.811543, -45.9019, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 1.5 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("BootUp/Title:rect_position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 400, -0.25, 0, 0.25, 0, 280, -0.711543, 19.867, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 1.5 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("BootUp/Title:rect_position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 222, -0.25, 0, 0.25, 0, 222, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 1.5 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("BootUp:rect_pivot_offset:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 480, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("BootUp:rect_pivot_offset:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("BootUp:rect_position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2, 3 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("BootUp:rect_position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -32, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2, 3 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("BootUp:rect_scale:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.35, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2, 3 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("BootUp:rect_scale:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.35, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2, 3 )
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("BootUp/Logo:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 352, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("BootUp/Logo:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 142, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("BootUp/Logo:rect_scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("BootUp/Logo:rect_scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("BootUp/Title/ColorRect:margin_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("BootUp/Title:rect_position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 400, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("BootUp/Title:rect_position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 222, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("BootUp:rect_pivot_offset:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 480, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("BootUp:rect_pivot_offset:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("BootUp:rect_position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("BootUp:rect_position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("BootUp:rect_scale:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("BootUp:rect_scale:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://source/scenes/common/assets/font/RedHatDisplay-Black.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 96
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 2 )
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 88 ), ExtResource( 10 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 21 ), ExtResource( 57 ), ExtResource( 109 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 73 ), ExtResource( 85 ), ExtResource( 25 ), ExtResource( 49 ), ExtResource( 71 ), ExtResource( 104 ), ExtResource( 97 ), ExtResource( 93 ), ExtResource( 12 ), ExtResource( 78 ), ExtResource( 34 ), ExtResource( 9 ), ExtResource( 108 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 55 ), ExtResource( 7 ), ExtResource( 26 ), ExtResource( 115 ), ExtResource( 13 ), ExtResource( 95 ), ExtResource( 59 ), ExtResource( 105 ), ExtResource( 94 ), ExtResource( 80 ), ExtResource( 50 ), ExtResource( 15 ), ExtResource( 112 ), ExtResource( 45 ), ExtResource( 63 ), ExtResource( 107 ), ExtResource( 83 ), ExtResource( 46 ), ExtResource( 51 ), ExtResource( 60 ), ExtResource( 62 ), ExtResource( 90 ), ExtResource( 70 ), ExtResource( 3 ), ExtResource( 65 ), ExtResource( 76 ), ExtResource( 91 ), ExtResource( 1 ), ExtResource( 27 ), ExtResource( 48 ), ExtResource( 64 ), ExtResource( 69 ), ExtResource( 86 ), ExtResource( 77 ), ExtResource( 6 ), ExtResource( 56 ), ExtResource( 120 ), ExtResource( 36 ), ExtResource( 66 ), ExtResource( 32 ), ExtResource( 58 ), ExtResource( 96 ), ExtResource( 89 ), ExtResource( 92 ), ExtResource( 101 ), ExtResource( 41 ), ExtResource( 74 ), ExtResource( 84 ), ExtResource( 31 ), ExtResource( 67 ), ExtResource( 61 ), ExtResource( 4 ), ExtResource( 79 ), ExtResource( 37 ), ExtResource( 75 ), ExtResource( 14 ), ExtResource( 53 ), ExtResource( 24 ), ExtResource( 102 ), ExtResource( 106 ), ExtResource( 110 ), ExtResource( 113 ), ExtResource( 33 ), ExtResource( 100 ), ExtResource( 87 ), ExtResource( 38 ), ExtResource( 116 ), ExtResource( 39 ), ExtResource( 118 ), ExtResource( 114 ), ExtResource( 43 ), ExtResource( 18 ), ExtResource( 47 ), ExtResource( 2 ), ExtResource( 42 ), ExtResource( 35 ), ExtResource( 52 ), ExtResource( 16 ), ExtResource( 28 ), ExtResource( 20 ), ExtResource( 72 ), ExtResource( 44 ), ExtResource( 103 ), ExtResource( 117 ), ExtResource( 11 ), ExtResource( 40 ), ExtResource( 19 ), ExtResource( 81 ), ExtResource( 54 ), ExtResource( 29 ), ExtResource( 68 ), ExtResource( 119 ), ExtResource( 5 ), ExtResource( 111 ), ExtResource( 82 ) ],
+"loop": true,
+"name": "loop",
+"speed": 60.0
+} ]
+
+[node name="BootUp" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 480, 0 )
+script = ExtResource( 121 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+anims/BootUp = SubResource( 4 )
+anims/RESET = SubResource( 5 )
+
+[node name="Title" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = -48.0
+margin_right = 560.0
+margin_bottom = 48.0
+
+[node name="Label" type="Label" parent="Title"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 3 )
+text = "BubbleClient"
+align = 1
+valign = 1
+
+[node name="ColorRect" type="ColorRect" parent="Title"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.188235, 0.341176, 0.917647, 1 )
+
+[node name="Logo" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -128.0
+margin_right = 128.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 128, 128 )
+color = Color( 0.188235, 0.341176, 0.917647, 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Logo"]
+frames = SubResource( 1 )
+animation = "loop"
+frame = 72
+playing = true
+centered = false
