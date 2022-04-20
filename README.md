@@ -4,7 +4,7 @@ A Minecrat client based on FabricMC that provides modpacks and configs.
 # Installing
 1. Download BubbleClient Hub from [Latest release](https://github.com/bubblefish-dev/bubbleclient-hub/releases/latest/)
 2. Run the file
-3 **For Windows users:** If your Windows Defender doesn't let you open the file, follow instruction here: [Microsoft Support Center](https://support.microsoft.com/en-us/windows/add-an-exclusion-to-windows-security-811816c0-4dfd-af4a-47e4-c301afe13b26)
+3. **For Windows users:** If your Windows Defender doesn't let you open the file, follow instruction here: [Microsoft Support Center](https://support.microsoft.com/en-us/windows/add-an-exclusion-to-windows-security-811816c0-4dfd-af4a-47e4-c301afe13b26)
 
 # Features
 Installing/Updating the modpack, Installing/Updating configs.
