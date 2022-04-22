@@ -1,0 +1,318 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/textures/logo/loop.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://assets/themes/Title.tres" type="Theme" id=61]
+[ext_resource path="res://assets/scripts/boot/boot.gd" type="Script" id=62]
+[ext_resource path="res://assets/textures/icons/spinner.png" type="Texture" id=63]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.188235, 0.341176, 0.917647, 1 )
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.188235, 0.341176, 0.917647, 1 )
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Logo:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Logo:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Logo:rect_position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 352, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Title:rect_position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -64, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("LoadingBar:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Logo:rect_position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 142, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Title:rect_position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 206, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "boot_up"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Logo:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.75, 0, 0.75, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Logo:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.75, 0, 0.75, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Logo:rect_position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 352, -0.25, 0, 0.25, 0, 40, -0.75, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 1.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Title:rect_position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -64, -0.25, 0, 0.25, 0, 270.5, -0.75, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 1.5 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("LoadingBar:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.5, 0, 1, -0.5, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 2 )
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "hide"
+length = 0.6
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Title:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 270.5, -0.25, 0, 0.25, 0, -640, -0.33, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Logo:rect_position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 40, -0.25, 0, 0.25, 0, -280, -0.33, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("LoadingBar:modulate:a")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.5, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 360.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "loop"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://assets/fonts/RedHatDisplay-Black.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 8 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 9 )
+
+[node name="Boot" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 62 )
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -544.0
+margin_top = -64.0
+margin_right = 67.0
+margin_bottom = 64.0
+theme = ExtResource( 61 )
+text = "BubbleClient"
+
+[node name="Logo" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -128.0
+margin_right = 128.001
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 128, 128 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel" type="Panel" parent="Logo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -640.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Logo"]
+frames = ExtResource( 1 )
+animation = "loop"
+frame = 26
+playing = true
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/boot_up = SubResource( 4 )
+anims/hide = SubResource( 11 )
+
+[node name="LoadingBar" type="HBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -86.0
+margin_top = -91.0
+margin_right = 86.0
+margin_bottom = -48.0
+grow_horizontal = 2
+
+[node name="Spinner" type="Control" parent="LoadingBar"]
+margin_right = 48.0
+margin_bottom = 43.0
+rect_min_size = Vector2( 48, 32 )
+
+[node name="TextureRect" type="TextureRect" parent="LoadingBar/Spinner"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 46.0
+margin_bottom = 46.0
+rect_rotation = 360.0
+rect_pivot_offset = Vector2( 16, 16 )
+texture = ExtResource( 63 )
+
+[node name="SpinnerLoop" type="AnimationPlayer" parent="LoadingBar/Spinner"]
+anims/RESET = SubResource( 6 )
+anims/loop = SubResource( 7 )
+
+[node name="Label" type="Label" parent="LoadingBar"]
+margin_left = 52.0
+margin_right = 501.0
+margin_bottom = 43.0
+theme = SubResource( 10 )
+text = "Getting data from the server"
+valign = 1
+
+[node name="GetStatus" type="HTTPRequest" parent="."]
+use_threads = true
+
+[node name="GetGlobalStatus" type="HTTPRequest" parent="."]
+use_threads = true
+
+[connection signal="request_completed" from="GetStatus" to="." method="_on_GetStatus_request_completed"]
+[connection signal="request_completed" from="GetGlobalStatus" to="." method="_on_GetGlobalStatus_request_completed"]

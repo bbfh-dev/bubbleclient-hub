@@ -1,0 +1,470 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://assets/scripts/main/main.gd" type="Script" id=1]
+[ext_resource path="res://assets/themes/Main.tres" type="Theme" id=2]
+[ext_resource path="res://assets/textures/logo/loop.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://assets/textures/icons/puzzle.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/icons/home.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/icons/list.png" type="Texture" id=6]
+[ext_resource path="res://assets/textures/icons/info.png" type="Texture" id=7]
+[ext_resource path="res://assets/scripts/main/panel_nav.gd" type="Script" id=8]
+[ext_resource path="res://assets/textures/icons/warning.png" type="Texture" id=9]
+[ext_resource path="res://assets/scripts/main/downloader.gd" type="Script" id=10]
+[ext_resource path="res://assets/scripts/main/installation.gd" type="Script" id=11]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[sub_resource type="Animation" id=1]
+resource_name = "boot_up"
+length = 0.6
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 960, -0.25, 0, 0.25, 0, 0, -0.5, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://assets/fonts/RedHatDisplay-Black.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://assets/fonts/RedHatDisplay-Black.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 10
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 9 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Logo:speed_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Logo:speed_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 0.12549 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.188235, 0.341176, 0.917647, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color( 0, 0, 0, 0.0784314 )
+shadow_size = 10
+shadow_offset = Vector2( 0, 4 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.117647, 0.694118, 0.270588, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color( 0, 0, 0, 0.0784314 )
+shadow_size = 10
+shadow_offset = Vector2( 0, 4 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 960.0
+margin_right = 960.0
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/boot_up = SubResource( 1 )
+
+[node name="Status" type="Control" parent="."]
+anchor_right = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -15.9998
+margin_bottom = 96.0
+rect_min_size = Vector2( 0, 96 )
+
+[node name="Control" type="Control" parent="Status"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0001
+margin_top = -48.0
+margin_right = 31.9999
+margin_bottom = 16.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="Logo" type="AnimatedSprite" parent="Status/Control"]
+scale = Vector2( 0.25, 0.25 )
+frames = ExtResource( 3 )
+animation = "loop"
+frame = 14
+speed_scale = 0.0
+playing = true
+centered = false
+
+[node name="Label" type="Label" parent="Status/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -6.0
+margin_top = 52.0
+margin_right = 6.0
+margin_bottom = 74.0
+grow_horizontal = 2
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 0.392157 )
+custom_fonts/font = SubResource( 6 )
+text = "v"
+align = 1
+
+[node name="VersionControl" type="Panel" parent="Status/Control/Label"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -34.0
+margin_top = -27.0
+margin_right = 34.0
+margin_bottom = -11.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_styles/panel = SubResource( 8 )
+
+[node name="Label" type="Label" parent="Status/Control/Label/VersionControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 0.784314 )
+custom_fonts/font = SubResource( 10 )
+text = "Up to date"
+align = 1
+valign = 1
+
+[node name="LogoFade" type="AnimationPlayer" parent="Status/Control"]
+anims/fade_in = SubResource( 3 )
+anims/fade_out = SubResource( 4 )
+
+[node name="PanelNav" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -412.0
+margin_right = -848.0
+margin_bottom = -276.0
+rect_min_size = Vector2( 48, 136 )
+theme = ExtResource( 2 )
+script = ExtResource( 8 )
+window_path = NodePath("../Window")
+
+[node name="Features" type="Button" parent="PanelNav"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 44.0
+margin_bottom = 44.0
+theme = ExtResource( 2 )
+disabled = true
+
+[node name="Icon" type="TextureRect" parent="PanelNav/Features"]
+modulate = Color( 1, 1, 1, 0.784314 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -12.0
+margin_right = 12.0
+margin_bottom = 12.0
+rect_pivot_offset = Vector2( 12, 12 )
+texture = ExtResource( 4 )
+stretch_mode = 3
+
+[node name="Installation" type="Button" parent="PanelNav"]
+margin_left = 4.0
+margin_top = 48.0
+margin_right = 44.0
+margin_bottom = 88.0
+theme = ExtResource( 2 )
+
+[node name="Icon" type="TextureRect" parent="PanelNav/Installation"]
+modulate = Color( 1, 1, 1, 0.784314 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -12.0
+margin_right = 12.0
+margin_bottom = 12.0
+rect_pivot_offset = Vector2( 12, 12 )
+texture = ExtResource( 5 )
+stretch_mode = 3
+
+[node name="Mods" type="Button" parent="PanelNav"]
+margin_left = 4.0
+margin_top = 92.0
+margin_right = 44.0
+margin_bottom = 132.0
+theme = ExtResource( 2 )
+
+[node name="Icon" type="TextureRect" parent="PanelNav/Mods"]
+modulate = Color( 1, 1, 1, 0.784314 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -12.0
+margin_right = 12.0
+margin_bottom = 12.0
+rect_pivot_offset = Vector2( 12, 12 )
+texture = ExtResource( 6 )
+stretch_mode = 3
+
+[node name="PanelHelp" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -262.0
+margin_right = -848.0
+margin_bottom = -213.0
+rect_min_size = Vector2( 48, 48 )
+theme = ExtResource( 2 )
+
+[node name="About" type="Button" parent="PanelHelp"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 44.0
+margin_bottom = 44.0
+theme = ExtResource( 2 )
+
+[node name="Icon" type="TextureRect" parent="PanelHelp/About"]
+modulate = Color( 1, 1, 1, 0.784314 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -12.0
+margin_right = 12.0
+margin_bottom = 12.0
+rect_pivot_offset = Vector2( 12, 12 )
+texture = ExtResource( 7 )
+stretch_mode = 3
+
+[node name="Window" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 128.0
+margin_top = -412.0
+margin_right = -63.9998
+margin_bottom = -32.0
+rect_min_size = Vector2( 0, 332 )
+theme = ExtResource( 2 )
+
+[node name="Features" type="RichTextLabel" parent="Window"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[i]Loading...[/i]"
+text = "Loading..."
+
+[node name="Installation" type="Control" parent="Window"]
+visible = false
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 760.0
+margin_bottom = 372.0
+script = ExtResource( 11 )
+main_path = NodePath("../..")
+
+[node name="FabricChecker" type="Timer" parent="Window/Installation"]
+wait_time = 5.0
+autostart = true
+
+[node name="Downloader" type="HTTPRequest" parent="Window/Installation"]
+use_threads = true
+script = ExtResource( 10 )
+installation_path = NodePath("..")
+
+[node name="FabricNotFound" type="Control" parent="Window/Installation"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Text" type="RichTextLabel" parent="Window/Installation/FabricNotFound"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][color=#fc942d][b][i]Unresolved dependencies[/i][/b][/color][/center]
+To install BubbleClient you must install [url=fabricmc.net/use/installer/]Fabric Mod Loader[/url] for [b]1.17.1[/b]! Make sure \"Create profile\" checkbox is checked.
+
+You will be able to continue installation as soon as you have [code]fabric-loader-1.17.1[/code] in your minecraft launcher."
+text = "Unresolved dependencies
+To install BubbleClient you must install Fabric Mod Loader for 1.17.1! Make sure \"Create profile\" checkbox is checked.
+
+You will be able to continue installation as soon as you have fabric-loader-1.17.1 in your minecraft launcher."
+
+[node name="TextureRect" type="TextureRect" parent="Window/Installation/FabricNotFound"]
+modulate = Color( 0.988235, 0.580392, 0.176471, 1 )
+margin_left = 165.0
+margin_top = 8.0
+margin_right = 189.0
+margin_bottom = 32.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="FabricFound" type="Control" parent="Window/Installation"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Logs" type="ScrollContainer" parent="Window/Installation/FabricFound"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -184.0
+theme = ExtResource( 2 )
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="Container" type="VBoxContainer" parent="Window/Installation/FabricFound/Logs"]
+
+[node name="Panel" type="Panel" parent="Window/Installation/FabricFound"]
+margin_left = 576.0
+margin_right = 752.0
+margin_bottom = 364.0
+theme = ExtResource( 2 )
+custom_styles/panel = SubResource( 7 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Window/Installation/FabricFound/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -121.0
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][b]Warning[/b]
+Author does not take responsibility for actions you do with this client!
+
+This client DOES NOT have illegal mods according to CubeCraft [url=https://www.cubecraft.net/threads/allowed-mods-and-clients.228596/]Allowed Mods list[/url]
+[/center]"
+text = "Warning
+Author does not take responsibility for actions you do with this client!
+
+This client DOES NOT have illegal mods according to CubeCraft Allowed Mods list
+"
+
+[node name="InstallUpdateButton" type="Button" parent="Window/Installation/FabricFound/Panel"]
+margin_left = 8.0
+margin_top = 280.0
+margin_right = 168.0
+margin_bottom = 312.0
+theme = ExtResource( 2 )
+custom_styles/normal = SubResource( 11 )
+text = "Install/Update"
+
+[node name="MigrateButton" type="Button" parent="Window/Installation/FabricFound/Panel"]
+margin_left = 8.0
+margin_top = 320.0
+margin_right = 168.0
+margin_bottom = 352.0
+theme = ExtResource( 2 )
+custom_styles/normal = SubResource( 13 )
+text = "Migrate Settings"
+
+[node name="Mods" type="RichTextLabel" parent="Window"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[i]Loading...[/i]"
+text = "Loading..."
+
+[node name="About" type="RichTextLabel" parent="Window"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[i]Loading...[/i]"
+text = "Loading..."
+
+[connection signal="pressed" from="PanelNav/Features" to="PanelNav" method="_on_Features_pressed"]
+[connection signal="pressed" from="PanelNav/Installation" to="PanelNav" method="_on_Installation_pressed"]
+[connection signal="pressed" from="PanelNav/Mods" to="PanelNav" method="_on_Mods_pressed"]
+[connection signal="pressed" from="PanelHelp/About" to="PanelNav" method="_on_About_pressed"]
+[connection signal="meta_clicked" from="Window/Features" to="." method="_on_text_meta_clicked"]
+[connection signal="timeout" from="Window/Installation/FabricChecker" to="PanelNav" method="_on_FabricChecker_timeout"]
+[connection signal="request_completed" from="Window/Installation/Downloader" to="Window/Installation" method="_on_Downloader_request_completed"]
+[connection signal="request_completed" from="Window/Installation/Downloader" to="Window/Installation/Downloader" method="_on_Downloader_request_completed"]
+[connection signal="meta_clicked" from="Window/Installation/FabricNotFound/Text" to="." method="_on_text_meta_clicked"]
+[connection signal="pressed" from="Window/Installation/FabricFound/Panel/InstallUpdateButton" to="Window/Installation" method="_on_InstallUpdateButton_pressed"]
+[connection signal="pressed" from="Window/Installation/FabricFound/Panel/MigrateButton" to="Window/Installation" method="_on_MigrateButton_pressed"]
+[connection signal="meta_clicked" from="Window/Mods" to="." method="_on_text_meta_clicked"]
+[connection signal="meta_clicked" from="Window/About" to="." method="_on_text_meta_clicked"]

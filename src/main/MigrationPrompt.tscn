@@ -1,0 +1,121 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/scripts/main/prompt.gd" type="Script" id=2]
+[ext_resource path="res://assets/themes/Main.tres" type="Theme" id=3]
+[ext_resource path="res://assets/textures/icons/error.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/icons/download.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/icons/spinner.png" type="Texture" id=6]
+[ext_resource path="res://assets/textures/icons/file_check.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/icons/file_success.png" type="Texture" id=8]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 0.25098 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "error",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "loading",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "downloading",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "check",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://assets/fonts/RedHatDisplay-Black.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 1, 1, 1, 0.0784314 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="MigratePrompt" type="Panel"]
+margin_right = 568.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 568, 128 )
+theme = ExtResource( 3 )
+custom_styles/panel = SubResource( 11 )
+script = ExtResource( 2 )
+
+[node name="Status" type="Control" parent="."]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 16, 16 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Status"]
+position = Vector2( 16, 16 )
+frames = SubResource( 15 )
+animation = "check"
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_right = -336.0
+margin_bottom = -96.0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 13 )
+text = "Migrate from:"
+valign = 1
+
+[node name="Description" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = 31.0
+margin_right = -7.0
+margin_bottom = -9.0
+theme = ExtResource( 3 )
+text = "Your options, resource packs and server list will be migrated from the
+loader you choose. Keep in mind, that this can override default
+BubbleClient settings!"
+
+[node name="ContinueButton" type="Button" parent="."]
+margin_left = 477.0
+margin_top = 93.0
+margin_right = 562.0
+margin_bottom = 122.0
+theme = ExtResource( 3 )
+custom_styles/normal = SubResource( 18 )
+text = "Continue"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+margin_left = 151.0
+margin_top = 5.0
+margin_right = 562.0
+margin_bottom = 30.0
+theme = ExtResource( 3 )
+align = 1
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
