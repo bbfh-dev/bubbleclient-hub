@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=34 format=2]
+[gd_resource type="Theme" load_steps=36 format=2]
 
 [ext_resource path="res://assets/textures/icons/grabber_highlight.png" type="Texture" id=1]
 [ext_resource path="res://assets/textures/icons/grabber.png" type="Texture" id=2]
@@ -88,6 +88,16 @@ corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0.188235, 0.341176, 0.917647, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="DynamicFontData" id=21]
 font_path = "res://assets/fonts/Ubuntu-Bold.ttf"
@@ -212,6 +222,8 @@ HSlider/styles/grabber_area_highlight = SubResource( 31 )
 HSlider/styles/slider = SubResource( 29 )
 Label/fonts/font = SubResource( 5 )
 Panel/styles/panel = SubResource( 1 )
+ProgressBar/styles/bg = SubResource( 32 )
+ProgressBar/styles/fg = SubResource( 33 )
 RichTextLabel/fonts/bold_font = SubResource( 22 )
 RichTextLabel/fonts/bold_italics_font = SubResource( 20 )
 RichTextLabel/fonts/italics_font = SubResource( 14 )

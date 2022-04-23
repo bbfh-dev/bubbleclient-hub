@@ -21,7 +21,12 @@ func add_new_log(label: String, sublabel: String = '', status: String = 'loading
 func update_last_log(label: String, sublabel: String = '', status: String = 'loading'):
 	$FabricFound/Logs/Container.get_child(0).set_log_data(label, sublabel, status)
 
+func update_last_log_progress(value, max_value = -1) -> void:
+	$FabricFound/Logs/Container.get_child(0).set_progress(value, max_value)
+
 func _on_InstallUpdateButton_pressed() -> void:
+	for child in $FabricFound/Logs/Container.get_children():
+		$FabricFound/Logs/Container.remove_child(child)
 	"""
 	MODS:
 	"""
@@ -37,6 +42,7 @@ func _on_InstallUpdateButton_pressed() -> void:
 		counter += 1
 		if mod['action'] == 'download':
 			add_new_log('Searching for mod', mod['file'], 'check')
+			yield(get_tree().create_timer(0.05), 'timeout')
 			if file.file_exists(ROOT.BUBBLECLIENT_DIR + '/mods/' + mod['file']):
 				update_last_log('Already installed', mod['file'], 'done')
 			else:
@@ -45,7 +51,16 @@ func _on_InstallUpdateButton_pressed() -> void:
 				$Downloader.set_download_file(ROOT.BUBBLECLIENT_DIR + '/mods/' + mod['file'])
 				downloader_arg = mod['file']
 				$Downloader.request(ROOT.get_absolute_server_url('mods/' + mod['file']))
-				yield($Downloader, 'next')
+				$Downloader.is_downloading = true
+				if 'size' in mod:
+					update_last_log_progress(0, float(mod['size']))
+				var file_size := File.new()
+				yield(get_tree().create_timer(0.1), 'timeout')
+				while ($Downloader.is_downloading):
+					file_size.open(ROOT.BUBBLECLIENT_DIR + '/mods/' + mod['file'], File.READ)
+					update_last_log_progress(file_size.get_len())
+					file_size.close()
+					yield(get_tree().create_timer(0.1), 'timeout')
 		elif mod['action'] == 'remove':
 			add_new_log('Searching for mod', mod['file'], 'check')
 			if file.file_exists(ROOT.BUBBLECLIENT_DIR + '/mods/' + mod['file']):
@@ -54,7 +69,7 @@ func _on_InstallUpdateButton_pressed() -> void:
 			else:
 				update_last_log('Already removed', mod['file'], 'done')
 		file.close()
-		yield(get_tree().create_timer(0.1), 'timeout')
+		yield(get_tree().create_timer(0.05), 'timeout')
 	add_new_log('Done!', 'Operations in total: ' + str(counter), 'done')
 	yield(get_tree().create_timer(0.5), 'timeout')
 
@@ -72,12 +87,13 @@ func _on_InstallUpdateButton_pressed() -> void:
 		if regex.search(config['filename']):
 			re_match = regex.search(config['filename']).get_string()
 		dir.make_dir_recursive(ROOT.BUBBLECLIENT_DIR + '/' + re_match)
-		config_file.open(ROOT.BUBBLECLIENT_DIR + '/' + config['filename'], File.WRITE)
-		if config['contents'] is String:
-			config_file.store_string(config['contents'])
-		else:
-			config_file.store_string(JSON.print(config['contents'], '\t'))
-		config_file.close()
+		if not config_file.file_exists(ROOT.BUBBLECLIENT_DIR + '/' + config['filename']):
+			config_file.open(ROOT.BUBBLECLIENT_DIR + '/' + config['filename'], File.WRITE)
+			if config['contents'] is String:
+				config_file.store_string(config['contents'])
+			else:
+				config_file.store_string(JSON.print(config['contents'], '\t'))
+			config_file.close()
 	update_last_log('Configured', ROOT.BUBBLECLIENT_DIR + '/config', 'done')
 
 	"""
@@ -111,6 +127,8 @@ func _on_InstallUpdateButton_pressed() -> void:
 
 
 func _on_MigrateButton_pressed() -> void:
+	for child in $FabricFound/Logs/Container.get_children():
+		$FabricFound/Logs/Container.remove_child(child)
 	add_new_log('This is going to migrate your settings/server list from other client!')
 	var child = MIGRATION_PROMPT.instance()
 	var file = File.new()
