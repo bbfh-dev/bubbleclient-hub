@@ -52,10 +52,9 @@ func _on_InstallUpdateButton_pressed() -> void:
 				downloader_arg = mod['file']
 				$Downloader.request(ROOT.get_absolute_server_url('mods/' + mod['file']))
 				$Downloader.is_downloading = true
-				if 'size' in mod:
-					update_last_log_progress(0, float(mod['size']))
+				update_last_log_progress(0, float(mod['size']))
 				var file_size := File.new()
-				yield(get_tree().create_timer(0.1), 'timeout')
+				yield(get_tree().create_timer(0.5), 'timeout')
 				while ($Downloader.is_downloading):
 					file_size.open(ROOT.BUBBLECLIENT_DIR + '/mods/' + mod['file'], File.READ)
 					update_last_log_progress(file_size.get_len())
